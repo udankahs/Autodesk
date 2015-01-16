@@ -2,10 +2,8 @@ package com.email.scripts;
 
 import org.testng.annotations.Test;
 
-import com.email.pom.EmailLoginPage;
-import com.email.pom.GotoUnreadMail;
+import com.email.pom.iREPEmailReset_User;
 import com.email.pom.iREPLoginPage;
-import com.email.pom.iREPPasswordResetProfile;
 import com.lib.ExcelLib;
 
 public class PasswordReset extends iREPSuperTestNG 
@@ -14,10 +12,10 @@ public class PasswordReset extends iREPSuperTestNG
 	public void testPasswordReset() throws Exception 
 	{
 		iREPLoginPage loginPage = new iREPLoginPage(driver);
-		iREPPasswordResetProfile passwordReset = new iREPPasswordResetProfile(driver);
+		iREPEmailReset_User passwordReset = new iREPEmailReset_User(driver);
 
-		String xlPath = "D:/Selenium/test data/test data_Final.xls";
-		String sheetName = "Password Reset";
+		String xlPath = "D:/Selenium/test data/Test Data_AutoDesk.xls";
+		String sheetName = "Email Reset through User";
 		int rowCount = ExcelLib.getRowCount(xlPath, sheetName);
 
 		for (int i = 1; i <= rowCount; i++) 
@@ -25,26 +23,12 @@ public class PasswordReset extends iREPSuperTestNG
 			String iREPUname = ExcelLib.getCellValue(xlPath, sheetName ,i, 0);
 			String iREPpassword = ExcelLib.getCellValue(xlPath,	sheetName, i, 1);
 
-			String PrfoUname = ExcelLib.getCellValue(xlPath, sheetName, i, 2);
-			String iREPeMAil = ExcelLib.getCellValue(xlPath, sheetName, i, 3);
-
-			String eMailUname = ExcelLib.getCellValue(xlPath, sheetName, i, 4);
-			String eMailpassword = ExcelLib.getCellValue(xlPath,sheetName, i, 5);
-
-			String newPWD = ExcelLib.getCellValue(xlPath, sheetName, i,6);
+			String iREPeMAil = ExcelLib.getCellValue(xlPath, sheetName, i,2);
 
 			loginPage.login(iREPUname, iREPpassword);
-			String username = passwordReset.reset(PrfoUname, iREPeMAil);
+			passwordReset.reset(iREPeMAil);
 
-			EmailLoginPage emailLogin = new EmailLoginPage(driver);
-			emailLogin.login(eMailUname, eMailpassword);
-			
-			GotoUnreadMail unRead = new GotoUnreadMail(driver);
-			String newUsername = unRead.gotoUnreadMail(newPWD, username);
-			
-			ExcelLib.writeExcel(xlPath, sheetName, i, 7, newUsername);
-			System.out.println();
-			System.out.println("=============================================");
+			ExcelLib.writeExcel(xlPath, sheetName, i, 3, "Email Updated");
 		}
 		driver.quit();
 	}
