@@ -2,36 +2,34 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="88667" started-at="2015-01-16T16:52:22Z" finished-at="2015-01-16T16:53:50Z">
+  <suite name="Command line suite" duration-ms="16160" started-at="2015-01-16T17:00:40Z" finished-at="2015-01-16T17:00:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="88667" started-at="2015-01-16T16:52:22Z" finished-at="2015-01-16T16:53:50Z">
+    <test name="Command line test" duration-ms="16160" started-at="2015-01-16T17:00:40Z" finished-at="2015-01-16T17:00:56Z">
       <class name="com.email.scripts.PasswordReset">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@2d6a9952]" name="preCondition" is-config="true" duration-ms="20975" started-at="2015-01-16T22:22:22Z" finished-at="2015-01-16T22:22:43Z">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.PasswordReset@14899482]" name="preCondition" is-config="true" duration-ms="14655" started-at="2015-01-16T22:30:40Z" finished-at="2015-01-16T22:30:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@2d6a9952]" name="testPasswordReset" duration-ms="67614" started-at="2015-01-16T22:22:43Z" finished-at="2015-01-16T22:23:50Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="testPasswordReset()[pri:0, instance:com.email.scripts.PasswordReset@14899482]" name="testPasswordReset" duration-ms="1469" started-at="2015-01-16T22:30:55Z" finished-at="2015-01-16T22:30:56Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//h1 [@class='currentStatusUserName']/a"}
-Command duration or timeout: 13.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Window not found. The browser window may have been closed.
+Command duration or timeout: 297 milliseconds
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
 System info: host: 'Udanka', ip: '192.168.1.7', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 999a7020-403e-4b51-8d66-25ee25e3c165]]>
+Session ID: 3a44bdc2-1293-4bc1-a0c6-d8bb580f0de1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//h1 [@class='currentStatusUserName']/a"}
-Command duration or timeout: 13.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Command duration or timeout: 297 milliseconds
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
 System info: host: 'Udanka', ip: '192.168.1.7', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 999a7020-403e-4b51-8d66-25ee25e3c165
+Session ID: 3a44bdc2-1293-4bc1-a0c6-d8bb580f0de1
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -39,15 +37,9 @@ Session ID: 999a7020-403e-4b51-8d66-25ee25e3c165
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
-	at com.sun.proxy.$Proxy5.click(Unknown Source)
-	at com.email.pom.iREPEmailReset_User.reset(iREPEmailReset_User.java:39)
-	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:29)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at com.email.pom.iREPLoginPage.login(iREPLoginPage.java:29)
+	at com.email.scripts.PasswordReset.testPasswordReset(PasswordReset.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -69,23 +61,29 @@ Session ID: 999a7020-403e-4b51-8d66-25ee25e3c165
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
 	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//h1 [@class='currentStatusUserName']/a"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+	at com.email.scripts.PwdReset.main(PwdReset.java:14)
+Caused by: org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
 System info: host: 'Udanka', ip: '192.168.1.7', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous6779382364283464923webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous6779382364283464923webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+	at <anonymous class>.nsCommandProcessor.prototype.execute(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11706:23)
+	at <anonymous class>.Dispatcher.executeAs/<(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:8437:5)
+	at <anonymous class>.Resource.prototype.handle(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:8584:219)
+	at <anonymous class>.Dispatcher.prototype.dispatch(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:8531:36)
+	at <anonymous class>.WebDriverServer/<.handle(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11489:5)
+	at <anonymous class>.createHandlerFunc/<(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1935:41)
+	at <anonymous class>.ServerHandler.prototype.handleResponse(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2261:15)
+	at <anonymous class>.Connection.prototype.process(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1168:5)
+	at <anonymous class>.RequestReader.prototype._handleResponse(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1616:5)
+	at <anonymous class>.RequestReader.prototype._processBody(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1464:9)
+	at <anonymous class>.RequestReader.prototype.onInputStreamReady(file:///C:/Users/Udanka/AppData/Local/Temp/anonymous7474133451442547962webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1333:9)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPasswordReset -->
       </class> <!-- com.email.scripts.PasswordReset -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>
